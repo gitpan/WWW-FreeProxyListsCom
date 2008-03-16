@@ -17,6 +17,7 @@ my $builder = Module::Build->new(
         'HTML::TokeParser::Simple' => 3.15,
         'HTML::Entities'           => 1.35,
         'Devel::TakeHashArgs'      => 0.001,
+        'Class::Data::Accessor'    => 0.04001,
     },
     add_to_cleanup      => [ 'WWW-FreeProxyListsCom-*' ],
     create_makefile_pl => 'traditional',

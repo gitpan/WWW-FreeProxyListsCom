@@ -2,7 +2,7 @@
 
 use strict;
 use warnings;
-use Test::More tests => 64;
+use Test::More tests => 65;
 
 BEGIN {
     use_ok('Carp');
@@ -11,6 +11,7 @@ BEGIN {
     use_ok('HTML::TokeParser::Simple');
     use_ok('HTML::Entities');
     use_ok('Devel::TakeHashArgs');
+    use_ok('Class::Data::Accessor');
 	use_ok( 'WWW::FreeProxyListsCom' );
 }
 

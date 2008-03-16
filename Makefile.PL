@@ -8,13 +8,14 @@ WriteMakefile
           'EXE_FILES' => [],
           'VERSION_FROM' => 'lib/WWW/FreeProxyListsCom.pm',
           'PREREQ_PM' => {
-                           'Test::More' => 0,
                            'URI' => '1.35',
                            'HTML::TokeParser::Simple' => '3.15',
                            'WWW::Mechanize' => '1.34',
-                           'HTML::Entities' => '1.35',
                            'Devel::TakeHashArgs' => '0.001',
-                           'Carp' => '1.04'
+                           'Carp' => '1.04',
+                           'Test::More' => 0,
+                           'HTML::Entities' => '1.35',
+                           'Class::Data::Accessor' => '0.04001'
                          }
         )
 ;

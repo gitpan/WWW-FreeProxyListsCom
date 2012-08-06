@@ -3,7 +3,7 @@ package WWW::FreeProxyListsCom;
 use warnings;
 use strict;
 
-our $VERSION = '0.002';
+our $VERSION = '0.003';
 
 use Carp;
 use URI;
@@ -193,6 +193,7 @@ sub _parse_list {
         }
     }
 
+    shift @data; # quick and dirty fix to rid of bad data.
     return \@data;
 }
 

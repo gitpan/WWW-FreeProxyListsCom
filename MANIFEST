@@ -10,3 +10,4 @@ t/kwalitee.t
 examples/get_list.pl
 Makefile.PL
 META.yml
+META.json

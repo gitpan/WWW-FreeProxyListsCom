@@ -3,7 +3,7 @@
 use strict;
 use warnings;
 
-use lib '../lib';
+use lib qw(../lib  lib);
 use WWW::FreeProxyListsCom;
 
 my $prox = WWW::FreeProxyListsCom->new( debug => 1 );

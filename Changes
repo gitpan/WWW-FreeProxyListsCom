@@ -1,12 +1,20 @@
 Revision history for WWW-FreeProxyListsCom
 
-0.003   August 6, 2010
-        Fixed first element of the list being garbage
+0.004   2008-12-26
+        - Fixed a partially broken test
+        - Minor fixes to comply with the specs and Kwalitee game
+        - Added autogeneration of README from POD
+        - Moved author tests to xt/
+        - Switched away from now deprecated Class::Data::Accessor
+          to Class::Accessor::Grouped
 
-0.002   Mar 16, 2008
-        Fixed improper prerequisites list which was missing
-        Class::Data::Accessor
+0.003   2010-08-06
+        - Fixed first element of the list being garbage
 
-0.001   Mar 15, 2008
-        First version, released on an unsuspecting world.
+0.002   2008-03-16
+        - Fixed improper prerequisites list which was missing
+          Class::Data::Accessor
+
+0.001   2008-03-15
+        - First version, released on an unsuspecting world.
 

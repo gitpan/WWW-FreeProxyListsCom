@@ -5,9 +5,9 @@ author:
 build_requires:
   Test::More: 0
 configure_requires:
-  Module::Build: 0.4
+  Module::Build: 0
 dynamic_config: 1
-generated_by: 'Module::Build version 0.4, CPAN::Meta::Converter version 2.112150'
+generated_by: 'Module::Build version 0.4007, CPAN::Meta::Converter version 2.132830'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -16,7 +16,7 @@ name: WWW-FreeProxyListsCom
 provides:
   WWW::FreeProxyListsCom:
     file: lib/WWW/FreeProxyListsCom.pm
-    version: 0.003
+    version: 0.004
 requires:
   Carp: 1.04
   Class::Data::Accessor: 0.04001
@@ -25,6 +25,7 @@ requires:
   HTML::TokeParser::Simple: 3.15
   URI: 1.35
   WWW::Mechanize: 1.34
+  perl: 5.006
 resources:
   license: http://dev.perl.org/licenses/
-version: 0.003
+version: 0.004

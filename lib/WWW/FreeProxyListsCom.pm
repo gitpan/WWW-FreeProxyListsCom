@@ -3,7 +3,7 @@ package WWW::FreeProxyListsCom;
 use warnings;
 use strict;
 
-our $VERSION = '0.003';
+our $VERSION = '0.004';
 
 use Carp;
 use URI;
@@ -11,15 +11,14 @@ use WWW::Mechanize;
 use HTML::TokeParser::Simple;
 use HTML::Entities;
 use Devel::TakeHashArgs;
-
-use base 'Class::Data::Accessor';
-__PACKAGE__->mk_classaccessors qw(
+use base 'Class::Accessor::Grouped';
+__PACKAGE__->mk_group_accessors( simple => qw/
     error
     mech
     debug
     list
     filtered_list
-);
+/);
 
 sub new {
     my $self = bless {}, shift;
@@ -42,7 +41,7 @@ sub get_list {
     my $self = shift;
 
     $self->$_(undef) for qw(error list);
-    
+
     get_args_as_hash(\@_, \my %args, {
             type        => 'elite',
             max_pages   => 1,
@@ -94,7 +93,7 @@ sub get_list {
     my @proxies;
     for ( @links ) {
         unless ( $mech->get($_)->is_success ) {
-            $self->debug 
+            $self->debug
                 and carp 'Network error: ' . $mech->res->status_line;
             next;
         }
@@ -112,7 +111,7 @@ sub filter {
     my $self = shift;
 
     $self->$_(undef) for qw(error filtered_list);
-    
+
     get_args_as_hash( \@_, \my %args)
         or croak $@;
 
@@ -210,6 +209,8 @@ sub _set_error {
 
 1;
 __END__
+
+=encoding utf8
 
 =head1 NAME
 

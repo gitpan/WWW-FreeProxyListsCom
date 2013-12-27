@@ -18,9 +18,13 @@ my $builder = Module::Build->new(
         'HTML::Entities'           => 1.35,
         'Devel::TakeHashArgs'      => 0.001,
         'Class::Data::Accessor'    => 0.04001,
+        'perl' => '5.006',
     },
+    configure_requires => { 'Module::Build' => 0 },
     add_to_cleanup      => [ 'WWW-FreeProxyListsCom-*' ],
     create_makefile_pl => 'traditional',
 );
-
+if ( $ENV{RELEASE_TESTING} ) {
+    system('pod2text lib/WWW/FreeProxyListsCom.pm > README');
+}
 $builder->create_build_script();

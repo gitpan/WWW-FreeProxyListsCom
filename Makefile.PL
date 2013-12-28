@@ -7,7 +7,7 @@ WriteMakefile
   'VERSION_FROM' => 'lib/WWW/FreeProxyListsCom.pm',
   'PREREQ_PM' => {
                    'Carp' => '1.04',
-                   'Class::Data::Accessor' => '0.04001',
+                   'Class::Accessor::Grouped' => 0,
                    'Devel::TakeHashArgs' => '0.001',
                    'HTML::Entities' => '1.35',
                    'HTML::TokeParser::Simple' => '3.15',

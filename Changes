@@ -1,6 +1,9 @@
 Revision history for WWW-FreeProxyListsCom
 
-0.004   2008-12-26
+1.001   2013-12-27
+        - Fixed broken test and prereqs
+
+0.004   2013-12-26
         - Fixed a partially broken test
         - Minor fixes to comply with the specs and Kwalitee game
         - Added autogeneration of README from POD
